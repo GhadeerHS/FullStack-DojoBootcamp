@@ -1,0 +1,71 @@
+<html>
+   <head>
+       <title>Hover In/Out</title>
+       <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+       <script type="text/javascript">
+
+$(document).ready(function(){
+    $( "#stark" ).hover(
+  function() {
+    $( "#stark" ).attr("src", "stark.jpg"
+        )},
+     function() {
+   $( "#stark" ).attr("src","jon.jpg");
+  }
+);
+
+    $( "#targ" ).hover(
+  function() {
+  
+    $( "#targ" ).attr("src", "targaryen.jpg")
+    },
+     function() {
+        $( "#targ" ).attr("src","daenerys.jpg");
+  }
+);
+
+    $( "#lans" ).hover(
+  function() {
+    $( "#lans" ).attr("src", "lannister.jpg")
+    },
+     function() {
+   $( "#lans" ).attr("src","jimmy.jpg");
+  }
+);
+    $( "#bar" ).hover(
+  function() {
+    $( "#bar" ).attr("src","baratheon.png")},
+     function() {
+        $( "#bar" ).attr("src", "robert.jpg")}
+ 
+);
+            });
+   
+      </script>
+      <style type="text/css">
+             body{
+                    background-color: lightgrey;
+                }
+            #pics{
+                    min-height: 200px;
+               text-align: center;
+
+    
+                }
+            img{
+                width: 295px;
+                height: 200px;
+                margin: 20px 5px;
+    
+            }
+      </style>
+   </head>
+   <body>
+        <div id="pics"> 
+                <img id="stark" src="jon.jpg" alt="p1">
+                <img id="targ" src="daenerys.jpg" alt="p2">
+                <img id="lans" src="jimmy.jpg" alt="p3">
+                <img id="bar" src="robert.jpg" alt="p4">
+            </div>
+   </body>
+</html>

@@ -1,0 +1,212 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.header{
+    width: 930px;
+    height: auto;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.header img{
+    width: 90px;
+    position: absolute;
+}
+.header h1{
+    color: rgb(79, 79, 79);
+    font-size: 48px;
+    font-weight: normal;
+    margin: 20px 0px 0px 95px
+}
+.header h2{
+    font-size: 32px;
+    color: white;
+    background: linear-gradient(rgb(19, 99, 155), rgb(83, 131, 170), rgb(26, 100, 156));
+    padding: 10px;
+    font-weight: normal;
+    display: block;
+}
+.main_page{
+    width: 930px;
+    height: auto;
+    vertical-align: top;
+    display: inline-block;
+    background: linear-gradient(rgb(229, 229, 229), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+}
+.left_side{
+    width: 200px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+}
+.box1{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px 0px 10px 0px;
+}
+.red_text{
+    color: red;
+}
+.box2{
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.blue_text{
+    color: rgb(69, 123, 169);
+}
+
+.blue_button{
+    width: 195px;
+    height: 40px;
+    padding-top: 7px;
+    border-radius: 5px;
+    margin-top: 3px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    box-shadow:2px 2px rgb(138, 140, 143);
+    background: linear-gradient(rgb(95, 150, 192), rgb(37, 104, 158));
+    margin-bottom: 3px;
+}
+.orange_button{
+    width: 195px;
+    height: 40px;
+    padding-top: 7px;
+    border-radius: 5px;
+    margin-top: 3px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    box-shadow:2px 2px rgb(138, 140, 143);
+    background: linear-gradient(rgb(233, 169, 86), rgb(239, 116, 0));
+    margin-bottom: 30px;
+}
+.box3{
+    width: 200px;
+    height: 280px;
+    background-image: url("img/ad_background.png");
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.box3 p{
+    color: white;
+    font-size: 24px;
+}
+.box3 img{
+    width: 85px;
+    margin-bottom: 5px;
+}
+.sky_button{
+    width: 170px;
+    height: 30px;
+    padding-top: 7px;
+    border-radius: 5px;
+    margin-top: 3px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(rgb(123, 209, 223), rgb(5, 194, 222));
+    box-shadow: none;
+}
+
+.right_side{
+    width: 675px;
+    display: inline-block;
+    margin-left: 30px;
+}
+.home{
+    width: 20px;
+    vertical-align: top;
+    margin-top: 7px;
+}
+.right_side p{
+    display: inline-block;
+    vertical-align: top
+}
+.thin_blue_text{
+    color: rgb(0, 53, 140);
+    font-size: 15px;
+    margin-right: 380px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.phone{
+    width: 40px;
+    margin-top: 10px;
+}
+.contact_time p{
+    width: 160px;
+    height: 65px;
+    text-align: center;
+    font-size: 2px;
+}
+.contact_time span{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(37, 193, 221);
+
+}
+h3{
+    color: rgb(40, 102, 156);
+    margin: 7px 0px;
+}
+.right_side p{
+    font-size: 14px;
+}
+.right_side li{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.right_side ul{
+    margin-left: 40px;
+}
+.right_side ol{
+    margin-left: 40px;
+}
+.client_server{
+    width: 250px;
+    margin: 20px 0px 10px 200px;
+}
+.highlights{
+    color: rgb(0, 147, 170);
+    text-decoration: none;
+}
+
+.italic{
+    font-style: italic;
+}
+.footer{
+    height: 110px;
+    border-color: rgb(21, 136, 221);
+    border-style: solid;
+    border-width: 5px 5px 0px 5px;
+    padding: 10px 0px 0px 10px;
+    margin-top: 20px;
+    vertical-align: top;
+}
+.html_icon{
+    width: 110px;
+    display: inline-block;
+}
+.footer_text{
+    width: 522px;
+    display: inline-block;
+    vertical-align: top;
+}
+.footer h3{
+    vertical-align: top;
+    display: inline-block;
+    width: 320px;
+    margin-top: 0px;
+}
+.footer p{
+    vertical-align: top;
+    display: inline-block;
+    width: 520px;
+    margin-bottom: 5px;
+}

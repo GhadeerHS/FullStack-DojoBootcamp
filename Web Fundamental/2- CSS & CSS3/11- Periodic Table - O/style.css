@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'Times New Roman', Times, serif;
+}
+#page-wrapper {
+	background-color: lightgray;
+	width: 1040px;
+	height: 720px;
+	margin: 0 auto;
+}
+#groups-1-2, #groups-1-2 div, #groups-3-18 div, .lanth-act div, #groups-margin, div.margin, #groups-3-18, #periods-margin, #lanth-act-wrapper div.lanth-act-label {
+	float: left;
+}
+#groups-1-2 {
+	width: 164px;
+}
+#groups-1-2, #groups-margin, #groups-3-18 {
+	height: 526px;
+}
+#groups-1-2 div, #groups-3-18 div, .lanth-act div {
+	width: 47px;
+	height: 62px;
+	margin: 2px;
+	border: 1px solid #B8B8B8;
+}
+#groups-1-2 div.transparent, #groups-3-18 div.transparent, .lanth-act div.transparent {
+	background-color: transparent;
+	border-color: transparent;
+} 
+p, h4 {
+	text-align: center;
+	padding: 2px 0px;
+}
+p {
+	font-size: .9em;
+}
+h4 {
+	font-size: 1.2em;
+	color: #330066;
+}
+.small {
+	font-size: .75em;
+}
+.label, .star {
+	color: red;
+	font-size: 1em;
+	margin-top: 20px;
+}
+.label-double {
+	margin-top: 5px;
+	line-height: 25px;
+}
+#groups-1-2 div {
+	background-color:#6AA1FE;
+}
+#groups-margin {
+	width: 25px;
+}
+div.margin {
+	width: 20px;
+	height: 62px;
+	margin: 2px;
+}
+#groups-3-18 {
+	width: 850px;
+}
+#groups-3-18 div {
+	background-color: #FF939F
+}
+#groups-3-18 div.yellow {
+	background-color: #FED405;
+}
+#periods-margin {
+	width: 1040px;
+	height: 35px;
+}
+#lanth-act-wrapper div.lanth-act-label {
+	width: 164px;
+	height: 62px;
+}
+.lanth-act div {
+	background-color: 	#1FCA20;
+}

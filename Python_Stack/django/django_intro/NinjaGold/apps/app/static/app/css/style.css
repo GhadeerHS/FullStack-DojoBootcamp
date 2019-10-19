@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+}
+
+
+.head h3 input{
+    vertical-align: top;
+    display: inline-block;
+    margin: 0px auto;
+}
+.head img{
+    height: 100px;
+    width: 100px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.box1, .box2, .box3, .box4{
+    height: 160px;
+    width: 200px;
+    border: solid black 2px; 
+    vertical-align: top; 
+    display: inline-block;
+    text-align: center;
+    margin:10px;
+    background-color: lightgray;
+}
+.log h7 {
+    margin-top: 25px;
+    margin-right: 5px;
+    text-decoration: underline;
+
+}
+.log div {
+    overflow: auto;
+    width: 700px;
+    height: 300px;
+    vertical-align: top; 
+    display: inline-block;
+    border: dotted black 2px;
+    margin-top: 15px;
+}

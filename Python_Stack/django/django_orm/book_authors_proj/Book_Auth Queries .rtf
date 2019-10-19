@@ -1,0 +1,187 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red27\green31\blue34;}
+{\*\expandedcolortbl;;\cssrgb\c14118\c16078\c18039;}
+\margl1440\margr1440\vieww12780\viewh13260\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \
+\
+///////Query: Create 5 books with the following names: C Sharp, Java, Python, PHP, Ruby:\
+\
+
+\f1\fs24 >>> from apps.books_authors_app.models import *\
+>>> Books.objects.create(title="C sharp", desc="C# book")\
+<Books object: C sharp (1)>\
+>>> Books.objects.create(title="JAVA", desc="Java book")\
+<Books object: JAVA (2)>\
+>>> Books.objects.create(title="Python", desc="Python book")\
+<Books object: Python (3)>\
+>>> Books.objects.create(title="PHP", desc="php book")\
+<Books object: PHP (4)>\
+>>> Books.objects.create(title="Ruby", desc="Ruby book")\
+<Books object: Ruby (5)>\
+>>> Books.objects.all()\
+<QuerySet [<Books object: C sharp (1)>, <Books object: JAVA (2)>, <Books object: Python (3)>, <Books object: PHP (4)>, <Books object: Ruby (5)>]>\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ////////
+\f0\fs28 \'a0Query: Create 5 different authors: Jane Austen, Emily Dickinson, Fyodor Dostoevksy, William Shakespeare, Lau Tzu:
+\f1\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+>>> Authors.objects.create(first_name="Jane", last_name="Austen")\
+<Authors object: Jane (1)>\
+>>> Authors.objects.create(first_name="Emily", last_name="Dickinson")\
+<Authors object: Emily (2)>\
+>>> Authors.objects.create(first_name="Fyodor", last_name="Dostoevksy") <Authors object: Fyodor (3)>\
+>>> Authors.objects.create(first_name="William", last_name="Shakespeare") <Authors object: William (4)>\
+>>> Authors.objects.create(first_name="Lau", last_name="Tzu")\
+<Authors object: Lau (5)>\
+\
+\
+/////////
+\f0\fs28 \'a0Query: Change the name of the C Sharp book to C#:\
+
+\f1\fs24 >>> book_to_update = Books.objects.get(title="C sharp")\
+>>> book_to_update.title= "C#"\
+>>> book_to_update.save()\
+\
+///////
+\f0\fs28 \'a0Query: Change the first name of the 4th author to Bill:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 >>> author_to_update = Authors.objects.get(id=4)\
+>>> author_to_update.first_name= "Bill"\
+>>> author_to_update.save()
+\f1\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+////////
+\f0\fs28 \'a0Query: Assign the first author to the first 2 books:\
+\
+
+\f2\fs24 >>> author1 = Authors.objects.get(id=1)\
+>>> book1 = Books.objects.get(id=1)\
+>>> book2 = Books.objects.get(id=2)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 >>> author1=book1.Authors \
+>>> author1=book2.Authors \
+>>> book1.save()\
+>>> book2.save()
+\f0\fs28 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \'a0
+\f1\fs24 ////////
+\f0\fs28 Query: Assign the second author to the first 3 books:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 >>> author2 = Authors.objects.get(id=2)\
+>>> book3 = Books.objects.get(id=3)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 >>> author2=book1.Authors\
+>>> author2=book2.Authors\
+>>> author2=book3.Authors\
+>>> book1.save()\
+>>> book2.save()\
+>>> book3.save()\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \
+\'a0
+\f1\fs24 ////////
+\f0\fs28 Query: Assign the third author to the first 4 books:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 >>> book4 = Books.objects.get(id=4)\
+\
+>>> author3=book1.Authors\
+>>> author3=book2.Authors\
+>>> author3=book3.Authors\
+>>> author3=book4.Authors\
+\
+>>> book1.save()\
+>>> book2.save()\
+>>> book3.save()\
+>>> book4.save()\
+
+\f0\fs28 \
+\'a0
+\f1\fs24 ////////
+\f0\fs28 Query: Assign the fourth author to the first 5 books (or in other words, all the books):\
+
+\f2\fs24 >>> author4 = Authors.objects.get(id=4)\
+>>> book5 = Books.objects.get(id=5)\
+>>> author4=book1.Authors\
+>>> author4=book2.Authors\
+>>> author4=book3.Authors\
+>>> author4=book4.Authors\
+>>> author4=book5.Authors\
+>>> book1.save()\
+>>> book2.save()\
+>>> book3.save()\
+>>> book4.save()\
+>>> book5.save()\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\'a0
+\f1\fs24 ////////
+\f0\fs28 Query: Retrieve all the authors for the 3rd book:
+\f3 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 book3.Authors.all()\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \
+\'a0
+\f1\fs24 ////////
+\f0\fs28 Query: Remove the first author of the 3rd book:\
+
+\f1\fs24 >>> book3.Authors.remove(Authors.objects.get(id=1))\
+
+\f0\fs28 \
+\'a0
+\f1\fs24 ////////
+\f0\fs28 Query: Add the 5th author as one of the authors of the 2nd book:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 >>> author5 = Authors.objects.get(id=5)\
+>>> book2.Authors.add(author5)\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\'a0
+\f1\fs24 ////////
+\f0\fs28 Query: Find all the books that the 3rd author is part of:
+\f3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 author3.Books.all().values()\
+
+\f0\fs28 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \'a0
+\f1\fs24 ////////
+\f0\fs28 Query: Find all the authors that contributed to the 5th book
+\f1\fs24 :\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 author5.Books.all().values()
+\f3\fs28 \
+
+\fs24 		\uc0\u8232 
+\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+}

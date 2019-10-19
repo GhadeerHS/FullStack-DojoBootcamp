@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+    <title>The Results</title>
+    </head>
+    <body>
+        <div id="container2">
+            <h2>Submitted Info:</h2>
+            <hr>
+            <h4>Name: {{ name }}</h4>
+            <h4>Gender: {{ gender }}</h4>
+            <h4>Dojo Location:  {{ location }}</h4>
+            <h4>Favorite Language: {{ language }}</h4>
+            <h4>Comments: {{ comment }}</h4>
+            <form action="/">
+                <button type="submit" id ="button" class="btn btn-light">Go Back</button>
+            </form>  
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+  
+//Create 3 Users :
+User.objects.create(first_name="jean",last_name="do",email_address="jd@mail.com",age=25)
+  
+User.objects.create(first_name="alx",last_name="shon",email_address="ax@mail.com",age=24)
+  
+User.objects.create(first_name="roz",last_name="mod",email_address="roz@mail.com",age=24)
+
+
+//Retieve all users:
+User.objects.all()
+
+//Retrieve last user:
+User.objects.last()
+
+//Retrieve first user:
+User.objects.first()
+
+//Change the user with id=3 so their last name is Pancakes:
+user_to_update = User.objects.get(id=3)
+user_to_update.last_name= "Pancakes"
+movie_to_update.save()
+
+//Delete the user with id=2 from the database:
+user_to_delete = User.objects.get(id=2)
+user_to_delete.delete()
+
+//Get all the users, sorted by their first name
+User.objects.all().order_by('first_name')
+
+//Get all the users, sorted by their first name in descending order:
+
+User.objects.all().order_by('-first_name')
+

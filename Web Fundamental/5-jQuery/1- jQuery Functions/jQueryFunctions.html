@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+    <title>jQuery Functions :)</title>
+    <script>
+        $(document).ready(function(){
+            $("#click-btn").click(function(){
+                alert("\'clicked'\ ");
+            })
+
+            $("#hide-btn").click(function(){
+                $(".hide p").hide();
+            })
+
+            $("#show-btn").click(function(){
+                $(".hide p").show();
+            })
+
+            $("#toggle-btn").click(function(){
+                $(".toggle p").toggle();
+            })
+
+            $("#slidedown-btn").click(function(){
+                $(".slidedown,.slideup p").slideUp();
+            })
+
+            $("#slideup-btn").click(function(){
+                $(".slidedown , .slideup p").slideDown();
+            })
+
+            $("#slidetoggle-btn").click(function(){
+                $(".slidetoggle p").slideToggle();
+            })
+
+            $("#fadein-btn").click(function(){
+                $(".fadein ,.fadeout p").fadeOut();
+            })
+
+            $("#fadeout-btn").click(function(){
+                $(".fadein ,.fadeout p").fadeIn();
+            })
+
+
+            $("#addclass-btn").click(function(){
+                $(".addclass p").addClass("new");
+            })
+
+            $("#before-btn").click(function(){
+                $("#before-btn").before("<p>Added before!</p>")
+            })
+
+            $("#after-btn").click(function(){
+                $("#after-btn").after("<p>Added after</p>")
+            })
+
+            $("#append-btn").click(function(){
+                $(".append p").append("<p>Appended text</p>")
+            }) 
+            
+            $("#html-btn").click(function(){
+                $(".html p").html("HTML has <b>changed</b>")
+            })
+
+            $("#attr-btn").click(function(){
+                $(".attr img").attr("width", "100")
+            })
+
+            $("#val-btn").click(function(){
+                $("input:text").val("Hello !")
+            })
+            
+            $("#text-btn").click(function(){
+                $(".text p").text("Hello world!")
+            })
+        });
+    </script>
+    <style>
+        .new {
+        font-size: 150%;
+        color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> jQuery Functions</h1> <hr>
+        <div class="click">
+            <h4>1- .click() </h4>
+            <button id="click-btn">Click Me </button>
+            <p>Click to add colors to this.</p>
+        </div>
+        <hr>
+        <div class="hide">
+            <h4>2- .hide() </h4>
+            <button id="hide-btn">Hide Me </button>
+            <p>Click to hide this.</p>
+        </div>
+        <hr>
+        <div class="show">
+            <h4>3- .show() </h4>
+            <button id="show-btn">Show Me </button>
+            <p>Click to add show this.</p>
+        </div>
+        <hr>
+        <div class="toggle">
+            <h4>4- .toggle() </h4>
+            <button id="toggle-btn">Toggle Me </button>
+            <p>Click to toggle this.</p>
+        </div>
+        <hr>
+        <div class="slidedown">
+            <h4>5- .slideDown() </h4>
+            <button id="slidedown-btn">Slide Me Down</button>
+            <p>Click to slide down.</p>
+        </div>
+        <hr>
+        <div class="slideup">
+            <h4>6- .slideUp() </h4>
+            <button id="slideup-btn">Slide Me Up</button>
+            <p>Click to slide up.</p>
+        </div>
+        <hr>
+        <div class="slidetoggle">
+            <h4>7- .slideToggle() </h4>
+            <button id="slidetoggle-btn">Slide Me With toggle</button>
+            <p>Click to add colors to this.</p>
+        </div>
+        <hr>
+        <div class="fadein">
+            <h4>8- .fadeIn() </h4>
+            <button id="fadein-btn">Fade Me In </button>
+            <p>Click to fade in this.</p>
+        </div>
+        <hr>        
+        <div class="fadeout">
+            <h4>9- .fadeOut() </h4>
+            <button id="fadeout-btn">Fade Me Out </button>
+            <p>Click to fade out this.</p>
+        </div>
+        <hr>
+        <div class="addclass">
+            <h4>10- .addClass() </h4>
+            <button id="addclass-btn">Add class </button>
+            <p>Click to add class to this.</p>
+        </div>
+        <hr>
+        <div class="before">
+            <h4>11- .before() </h4>
+            <button id="before-btn">Before Me </button>
+            <p>Click to add before to this.</p>
+        </div>
+        <hr>
+        <div class="after">
+            <h4>12- .after() </h4>
+            <button id="after-btn">After Me </button>
+            <p>Click to add after to this.</p>
+        </div>
+        <hr>
+        <div class="append">
+            <h4>13- .append() </h4>
+            <button id="append-btn">Append Me </button>
+            <p>Click to append to this.</p>
+        </div>
+        <hr>
+        <div class="html">
+            <h4>14- .html() </h4>
+            <button id="html-btn">HTML</button>
+            <p>Click to change html .</p>
+        </div>
+        <hr>
+        <div class="attr">
+            <h4>15- .attr() </h4>
+            <button id="attr-btn">Attr</button>
+            <img src="ninja.png" alt="ninja">
+        </div>
+        <hr>
+        <div class="val">
+            <h4>16- .val() </h4>
+            <button id="val-btn">val</button>
+            <p>Name: <input type="text" name="user"></p>
+        </div>
+        <hr>
+        <div class="text">
+            <h4>17- .text() </h4>
+            <button id="text-btn">Text</button>
+            <p>Click to add text to this.</p>
+        </div>
+    </div>
+</body>
+</html>

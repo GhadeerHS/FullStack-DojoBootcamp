@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Game Of Thronse</title>
+        <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+        <script>
+                function house(num){
+                   $.ajax({
+                       url: 'https://anapioficeandfire.com/api/houses/'+num,
+                       dataType: "json",
+                       success: function ( house ) {
+                           console.log(house);
+    
+                           document.getElementById("p").innerText=
+                           "Name: "+ house.name+
+                           "\n\nWords: "+house.words+
+                           "\n\n\nTitles: "+house.titles+
+
+                           "\n\nStory: "+ stories[num] ;
+                        }
+                    });
+                }
+               var stories=
+               {
+                "362": "The Starks ruled the North until the betrayal of Robb Stark at the Red Wedding by Roose Bolton. Since then, it has been the Boltons who rule the North with their seat shifted to Winterfell from the Dreadfort. Karstark, Manderly, Umber, Reed and Mormont are the major vassal houses who swear allegiance to the Warden of the North.",
+                "378": "House Targaryen of Dragonstone is a noble family of Valyrian descent who once ruled the Seven Kingdoms of Westeros. The Targaryen sigil is a three-headed dragon breathing flames, red on black.",
+                "229": "The Westerlands were known as the Kingdom of the Rock until before the Targaryen conquest. Since then, it has been ruled by House Lannister of Casterly Rock. It is one of the richest kingdoms of Westeros and was restored to glory under the able leadership of Tywin Lannister. Clegane, Payne, Swyft and Westerling are major vassal houses in the Westerlands.",
+                "17": "The Stormlands were captured by Orys Baratheon, Aegon Targaryen’s bastard half-brother, during the War of Conquest. Storm’s End was ruled ever since for almost three centuries until Robert’s rebellion. After Stannis’ flight from Storm’s End, it is unclear who currently occupies a seat there. Connington, Dondarrion, Selmy and Tarth are the major vassal houses of the Stormlands.",
+               } 
+            $(document).ready(function(){
+                $('#stark').click(function (event){
+                    house(362);
+                })
+                $('#targ').click(function (event){
+                    house(378);
+                })
+                $('#lans').click(function (event){
+                    house(229);
+                })
+                $('#bar').click(function (event){
+                    house(17);
+                })
+            });
+            </script>
+            <style>
+                body{
+                    background-color: lightgrey;
+                }
+            #pics{
+                    min-height: 200px;
+                vertical-align: center;
+    
+                }
+            img{
+                width: 295px;
+                height: 200px;
+                margin: 20px 5px;
+    
+            }
+            #details{
+          
+                background-image: url("chair.jpg");
+                background-size: cover;
+                min-height: 400px;
+                margin: 30px auto;
+                padding: 20px;
+                box-sizing: border-box;
+                width: 700px;
+                border: 5px solid black;
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                color:white;
+                font-size: 20px;
+            }
+            h1{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 10px auto;
+                color: white;
+            }
+            </style>
+
+
+    </head>
+    <body>
+        
+        <div id="pics"> 
+            <img id="stark" src="stark.jpg" alt="p1">
+            <img id="targ" src="targaryen.jpg" alt="p2">
+            <img id="lans" src="lannister.jpg" alt="p3">
+            <img id="bar" src="baratheon.png" alt="p4">
+        </div>
+        <div id="details"> 
+            <h1>House Details</h1>
+            <p id="p">
+
+            </p>
+
+        </div>
+
+
+    </body>
+</html>
+

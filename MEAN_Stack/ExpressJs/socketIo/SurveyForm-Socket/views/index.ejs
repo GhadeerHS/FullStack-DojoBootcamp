@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+        <div id="header">
+            <p class="form"></p> 
+            <p class="rand"></p> 
+        </div>
+    <div id="container">
+            <h2>Dojo Survey</h2>
+            <hr>
+            <div class="form-group">
+                <label for="Input1">Your Name:</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="location">Dojo Location:</label>
+                <select multiple class="form-control" id="location"  required>
+                    <option value="dammam">Dammam</option>
+                    <option value="riyadh">Riyadh</option>
+                    <option value="yanbu">Yanbu</option>
+                    <option value="jeddah">Jeddah</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="language">Favorite Language:</label>
+                <select multiple class="form-control" id="language" required>
+                    <option value="C++">C++</option>
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Kotlin">Kotlin</option>
+                    <option value="Swift">Swift</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Textarea1">Comments (optional):</label>
+                <textarea class="form-control" name="comment" form="dojoform" id="comment" rows="3"></textarea>
+            </div>
+            <button type="submit" id ="bottn" value="submit" class="btn btn-light">Submit</button>      
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var socket = io();
+            $("#bottn").click(function(){
+                console.log("button clicked ");
+                socket.emit("post", {
+                    name:$("#name").val(),
+                    location:$("#location").val(),
+                     language:$("#language").val(),
+                    comment:$("#comment").val()
+                });
+            });
+            socket.on("message", function(data){
+                $(".form").text(data.info)
+            });
+            socket.on("random_number", function(data){
+                $(".rand").text(data.message);
+            })
+        });
+    </script>
+</body>
+</html>

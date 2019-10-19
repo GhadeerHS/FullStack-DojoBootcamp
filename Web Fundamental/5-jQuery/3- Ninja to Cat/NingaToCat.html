@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Ninja To Cat ;)</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('img').click(function() {
+                    var temp =$(this).attr('src');
+                    $(this).attr('src',$(this).attr('swap-src') );
+                    $(this).attr('swap-src',temp );
+
+                });
+            });
+        </script>
+        <style>
+            img{
+                display: block;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <img src='ninja0.png' swap-src='cat0.png' />
+        <img src='ninja1.png' swap-src='cat1.png' />
+        <img src='ninja2.png' swap-src='cat2.png' />
+        <img src='ninja3.png' swap-src='cat3.png' />
+        <img src='ninja4.png' swap-src='cat4.png' />
+    </body>
+
+
+</html>

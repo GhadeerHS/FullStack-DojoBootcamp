@@ -1,0 +1,23 @@
+  
+* {
+    text-align: center;
+}
+#title {
+    font-size: 20px;
+}
+
+#epic {
+    width: 250px;
+    height: 90px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 5rem;
+    color: white;
+    background-color: darkblue;
+}
+#reset {
+    width: 250px;
+    height: 90px;
+    color: white;
+    background-color: darkred;
+}

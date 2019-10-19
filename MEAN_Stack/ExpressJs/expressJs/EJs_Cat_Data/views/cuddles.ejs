@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cuddles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Detail Page for Cuddles</h1>
+        <img src="<%= cat[0].source %>">
+        <% for (var x in cat) { %>
+            <h2>Name: <%= cat[x].name %> </h2>
+            <h2>Favorite Food: <%= cat[x].food %> </h2>
+            <h2>Spots:</h2>
+            <h3>
+                <% for (var y in cat[x].spots) { %>
+                    <%= cat[x].spots[y] %><br>
+                <% } %>
+            </h3>
+        <% } %>
+    </div>
+</body>
+</html>

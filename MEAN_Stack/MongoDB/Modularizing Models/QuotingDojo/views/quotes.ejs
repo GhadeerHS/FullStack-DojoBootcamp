@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Quotes</title>
+</head>
+<body>
+    <h2>Here are some awesome quotes!</h2>
+    <% for (var i=0; i<quotes.length; i++) { %>
+        <p>"<%= quotes[i].content %>"</p>
+        <span><%= quotes[i].name %> at <%= quotes[i].created_at %></span>
+        <br>
+    <%}%>
+</body>
+</html>

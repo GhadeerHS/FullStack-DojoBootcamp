@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+    <title>Disappearing Ninja ;)</title>
+
+    <style>
+        *{
+            background-color:#ccd7d9;
+        }
+        .contanier{
+            margin: 0px auto;
+            width: 830px;
+        }
+        h2{
+            color: #1d545c;
+            text-align: center;
+        }
+        .ninja{
+            vertical-align: top;
+            display: inline-block;
+           
+        }
+        .ninja img{
+            height: 200px;
+            width: 200px;
+            border: dotted black 2px;
+        }
+        button{
+            display: block;
+            margin-left: 55px;
+            margin-top: 30px;
+            background:linear-gradient(to bottom, #1d545c 5%, #47a7b5 100%);
+            border:1px solid #1d545c;
+            border-radius: 6px;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:12px;
+            font-weight:bold;
+            height: 35px;
+            width: 100px;
+            
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('img').click(function(){
+                $(this).fadeOut("slow");
+            })
+            $('button').click(function(){
+                $('img').fadeIn("slow");
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="contanier">
+        <h2>jQuery - assignment 1</h2>
+        <div class="ninja">
+            <img src="ninja.png" alt="ninja image">
+            <img src="ninja.png" alt="ninja image">
+            <img src="ninja.png" alt="ninja image">
+            <img src="ninja.png" alt="ninja image">
+            <br>
+            <img src="ninja.png" alt="ninja image">
+            <img src="ninja.png" alt="ninja image">
+            <img src="ninja.png" alt="ninja image">
+            <img src="ninja.png" alt="ninja image">
+        </div>
+        <button class="btn">Restore</button>
+    </div>
+
+</body>
+</html>

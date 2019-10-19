@@ -1,0 +1,29 @@
+.container{
+    width:400px;
+    height: 200px;
+    margin:auto;
+    margin-top:20px;
+}
+.head{
+    text-align: center;
+    color: darkred;
+    margin:auto;
+    margin-top:15px;
+    padding:5px;
+}
+.str{
+    border:dotted 2px black;
+    text-align: center;
+    color: darkslategray;
+    margin:auto;
+    margin-top:15px;
+    padding:5px;
+}
+.btn{
+    text-align: center;
+    color: darkslategray;
+    margin:auto;
+    margin-top:15px;
+    padding:5px;
+}
+}

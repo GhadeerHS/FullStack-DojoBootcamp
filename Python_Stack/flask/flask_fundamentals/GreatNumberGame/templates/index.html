@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Great Number Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="static/style.css"> -->
+</head>
+<body>
+    <h1> The Great Number Game!</h1>
+    <hr>
+    <h2> Guess a number between 1-100</h2>
+    {% for x in range(1) %}
+    <div class="box" style="background-color: {{ color }};">
+    <p>{{response}}</p> 
+    </div>
+    {% endfor %}
+    <p> Take a guess..</p>
+
+    <form action="/guess" method='POST'>
+        <input type="text" name="number">
+        <br>
+        <button type="submit" name ="" value="submit">Submit</button>
+    </form>
+    <a href="http://localhost:5000/reset"><button type="submit" name="" value="reset">Play Again ;)</button></a>
+
+</body>
+</html>

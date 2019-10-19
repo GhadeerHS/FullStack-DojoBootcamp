@@ -1,0 +1,16 @@
+* {
+    text-align: center;
+}
+body {
+    background-color: white;
+}
+button {
+    width: 250px;
+    height: 90px;
+    margin: 30px;
+    margin-top: 100px;
+    padding: 2px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px 20px;
+}
