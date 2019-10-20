@@ -1,0 +1,37 @@
+.container {
+    margin: 0 auto;
+}
+
+.adventure {
+    margin: 0 auto;
+}
+
+.box {
+    margin: 10px;
+    text-align: center;
+    vertical-align: center;
+    border: 2px solid silver;
+    min-height: 200px;
+    padding: 25px 10px;
+    color: white;
+    background-color: rgb(117, 117, 117);
+}
+
+.box2 {
+    margin: 10px;
+    text-align: center;
+    vertical-align: center;
+    border: 2px solid silver;
+    min-height: 200px;
+    padding: 25px 10px;
+    background-color:rgb(117, 117, 117);
+}
+
+.log {
+    border: 1px solid rgb(4, 11, 75);
+    padding: 10px;
+    height: 400px;
+    margin: 10px;
+    overflow: auto;
+    background-color: white;
+}
