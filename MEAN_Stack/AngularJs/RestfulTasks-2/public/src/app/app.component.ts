@@ -1,30 +1,34 @@
-import { Component,OnInit } from '@angular/core';
-// import { HttpService } from './http.service';
-import { TaskService } from './task.service';
-
-import { Tasks } from './task';
+import { Component } from '@angular/core';
+import { HttpService } from './http.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'Restful Tasks Continued';
+
+export class AppComponent {
+  title = 'Restful Task Continued';
   tasks = [];
-  constructor(private taskService: TaskService){};
-
-  ngOnInit(){
-    this.getTaskFormService()
+  singleTask = null;
+  constructor(private _httpService: HttpService) {
+    this.getTasks();
+    this.getId();
   }
 
-  getTaskFormService(){
+  getTasks() {
+    let tempObservable = this._httpService.getTasks()
+    tempObservable.subscribe(data => {
+      this.tasks = data['data'];
+      console.log("Got our tasks!", data)
+    });
 
-    // let observable = this._httpService.getTasks()
-    this.taskService.subscribe(data =>{
-      console.log("Got our data",data)
-      this.tasks = data['tasks'];
-    })
   }
-
+  getId() {
+    let tempObservable = this._httpService.getId();
+    tempObservable.subscribe(data => {
+      this.singleTask = data['data'];
+      console.log("Got our ID", data)
+    });
+  }
 }

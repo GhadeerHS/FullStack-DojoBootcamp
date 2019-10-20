@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class HttpService {
 
+export class HttpService {
   constructor(private _http: HttpClient) {
-    // this.getTasks();
-   }
-   getTasks(){
-    //  let tempObservable = this._http.get('/tasks');
-    //  tempObservable.subscribe(data => console.log("Got our tasks!", data));
-    return this._http.get('tasks')
-   }
+  }
+  getTasks() {
+    return this._http.get('/tasks');
+  }
+  getId() {
+    return this._http.get('/tasks/5c6b7587eaf87956f435fb55');
+  }
 }
