@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PTheoremTest",
+            "request": "launch",
+            "mainClass": "PythagoreanTheorem.PTheoremTest",
+            "projectName": "Java_Stack_da6af140"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FirstJavaProgram<Java_Stack_da6af140>",
+            "request": "launch",
+            "mainClass": "FirstJavaProgram",
+            "projectName": "Java_Stack_da6af140"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-hello<Java_Stack_da6af140>",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "Java_Stack_da6af140"
+        }
+    ]
+}
