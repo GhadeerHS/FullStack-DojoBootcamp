@@ -1,3 +1,5 @@
+package PythagoreanTheorem;
+
 public class PTheoremTest {
     public static void main(String[] args) {
     PTheorem p = new PTheorem();

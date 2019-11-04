@@ -1,3 +1,5 @@
+package StringManipulation;
+
 public class StringManipulationTest {
     public static void main(String[] args) {
         StringManipulation concat = new StringManipulation();

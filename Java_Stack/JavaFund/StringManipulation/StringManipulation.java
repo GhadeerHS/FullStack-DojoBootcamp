@@ -1,3 +1,5 @@
+package StringManipulation;
+
 public class StringManipulation {
     public String trimAndConcat(String a, String b){
         String c = a.trim();
