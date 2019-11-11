@@ -78,7 +78,7 @@ public class SongController {
 		return "/songs/search.jsp";
 	}
 	
-	@RequestMapping(value="/songs/{id}", method=RequestMethod.DELETE)
+	@RequestMapping("/songs/{id}/delete")
 	public String delete(@PathVariable("id") Long id) {
 		songService.deleteSong(id);
 		return "redirect:/dashboard";
