@@ -33,14 +33,21 @@ public class BookService {
         }
     }
     // updates a book
-    public Book updateBook(Long id, String title, String desc, String lang, Integer pages) {
-		Book book = findBook(id);
-		book.setTitle(title);
-		book.setDescription(desc);
-		book.setLanguage(lang);
-		book.setNumberOfPages(pages);
-		return bookRepository.save(book);
-    }
+	public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
+		Optional<Book> book = bookRepository.findById(id);
+
+		if (book.isPresent()) {
+			Book update = book.get();
+			update.setTitle(title);
+			update.setDescription(desc);
+			update.setLanguage(lang);
+			update.setNumberOfPages(numOfPages);
+			return bookRepository.save(update);
+		}else {
+		return null;
+		}
+	}
+
     public Book updateBook(Book book) {
 		return bookRepository.save(book);
     }
