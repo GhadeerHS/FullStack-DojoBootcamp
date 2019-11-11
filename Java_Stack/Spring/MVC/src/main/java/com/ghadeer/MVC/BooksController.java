@@ -32,6 +32,7 @@ public class BooksController {
         model.addAttribute("books", books);
         return "/books/index.jsp";
     }
+    
     @RequestMapping("/books/new")
     public String newBook(@ModelAttribute("book") Book book) {
         return "/books/new.jsp";
