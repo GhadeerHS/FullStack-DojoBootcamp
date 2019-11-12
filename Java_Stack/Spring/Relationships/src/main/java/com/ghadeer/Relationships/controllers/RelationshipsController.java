@@ -19,10 +19,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.ghadeer.Relationships.models.Dojo;
 import com.ghadeer.Relationships.models.License;
+import com.ghadeer.Relationships.models.Ninja;
 import com.ghadeer.Relationships.models.Person;
+import com.ghadeer.Relationships.models.Product;
+import com.ghadeer.Relationships.services.CategoryService;
+import com.ghadeer.Relationships.services.DojoService;
 import com.ghadeer.Relationships.services.LicenseService;
+import com.ghadeer.Relationships.services.NinjaService;
 import com.ghadeer.Relationships.services.PersonService;
+import com.ghadeer.Relationships.services.ProductService;
 
 @Controller
 public class RelationshipsController {

@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
@@ -77,5 +79,14 @@ public class License {
     // ...
     // getters and setters removed for brevity
     // ...
+	@PrePersist
+    protected void onCreate() {
+    	this.createdAt = new Date();
+    }
+    
+    @PreUpdate
+    protected void onUpdate() {
+    	this.updatedAt = new Date();
+    }
     
 }
