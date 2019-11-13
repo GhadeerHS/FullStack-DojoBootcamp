@@ -14,6 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.ghadeer.Authentication.models.User;
 import com.ghadeer.Authentication.services.UserService;
+import com.ghadeer.Authentication.validator.UserValidator;
 
 @Controller
 public class Users {
