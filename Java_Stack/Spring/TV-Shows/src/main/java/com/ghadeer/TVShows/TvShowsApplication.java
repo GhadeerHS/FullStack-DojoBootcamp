@@ -1,13 +1,13 @@
-package com.ghadeer.TaskManager;
+package com.ghadeer.TVShows;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TaskManagerApplication {
+public class TvShowsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaskManagerApplication.class, args);
+		SpringApplication.run(TvShowsApplication.class, args);
 	}
 
 }
